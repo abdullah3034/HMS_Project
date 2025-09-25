@@ -1,0 +1,134 @@
+/* Main page layout */
+.checkout-report-wrapper {
+  max-width: auto;
+  margin: 1rem auto;
+  padding:30px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.checkout-page-container {
+  margin-right: 180px; /* Matches the sidebar width */
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/*  Filter Section Styling */
+.checkout-filter-section {
+ background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-filter-section h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Filter fields grid layout */
+.checkout-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.checkout-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.checkout-form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;}
+
+/* Select and date input styling */
+.checkout-form-group select,
+.checkout-form-group input[type="date"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Search button style */
+.checkout-search-button {
+   padding: 8px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #008080;
+  color: #fff;
+}
+
+
+/* Table Section Styling */
+.checkout-table-section {
+  background: #ffffff;
+  padding:20px;
+  
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Header above the table (entry selection) */
+.checkout-table-header {
+  margin-bottom: 10px;
+  
+}
+
+/* Dropdown for selecting number of entries */
+.checkout-entries-select {
+  margin: 0 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Table Layout */
+.checkout-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Table header background */
+.checkout-table thead {
+  background-color: #e8e8e8;
+}
+
+/*  Table cell styling */
+.checkout-table th,
+.checkout-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Row hover effect */
+.checkout-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* View button inside table */
+.checkout-view-button {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkout-view-button:hover {
+  background-color: #2980b9;
+}

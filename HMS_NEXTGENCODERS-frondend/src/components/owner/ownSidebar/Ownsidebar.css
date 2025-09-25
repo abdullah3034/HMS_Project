@@ -1,0 +1,126 @@
+/* Sidebar container styling */
+.Ownsidebar {
+  height: 100vh;
+  width: 250px;
+  background-color: #018A97;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 0px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.Ownsidebar-main-content {
+  margin-left: 200px;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+
+/* Header styling */
+.Ownsidebar h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Profile section */
+.Ownsidebar-profile {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Icon styling */
+.Ownsidebar-icon {
+  font-size: 30px;
+  display: block;
+}
+
+/* Navigation list styling */
+.Ownsidebar-nav {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+/* Navigation item styling */
+.Ownsidebar-nav li {
+  padding: 15px 20px;
+}
+
+/* Navigation link styling */
+.Ownsidebar-nav li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  transition: background 0.3s;
+}
+
+/* Hover effect for navigation links */
+.Ownsidebar-nav li a:hover {
+  background: rgb(131, 197, 190);
+  border-radius: 5px;
+}
+
+/* Active navigation link */
+.Ownsidebar-nav .active {
+  color: #fff;
+  background-color: rgb(131, 197, 190);
+}
+
+/* Content area beside sidebar */
+.Ownsidebar-main-content {
+  margin-left: 200px;
+  padding: 20px;
+  flex-grow:1;
+}
+
+/* Reports menu toggle */
+.Ownsidebar-reports-menu {
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 18px;
+}
+
+/* Style for submenu wrapper */
+.Ownsidebar-report-link {
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Submenu list */
+.Ownsidebar-sub-menu {
+  list-style: none;
+  padding-left: 10px;
+  margin-top: 2px;
+}
+
+/* Submenu list items */
+.Ownsidebar-sub-menu li {
+  margin: 4px 0;
+}
+
+/* Submenu links */
+.Ownsidebar-sub-menu a {
+  font-size: 14px;
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+/* Active submenu link */
+.Ownsidebar-sub-menu a.active {
+  font-weight: lighter;
+  color: white;
+}

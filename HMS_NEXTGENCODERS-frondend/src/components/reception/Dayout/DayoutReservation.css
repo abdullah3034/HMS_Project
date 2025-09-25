@@ -1,0 +1,757 @@
+/* Scoped CSS for DayoutReservation component only */
+.dayout-form-scope {
+  --primary-color: #00421e;
+  --secondary-color: #008080;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #020e1b;
+  --success-color: #00431c;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --border-radius: 6px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #072902;
+  padding: 20px;
+}
+
+.dayout-form-scope * {
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.dayout-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dayout-main-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Styling */
+.dayout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Form Sections */
+.dayout-form-section {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.dayout-form-section:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dayout-form-container {
+  padding: 30px;
+}
+
+.dayout-form-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--light-color);
+  position: relative;
+}
+
+.dayout-form-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+/* Form Grid Layout */
+.dayout-form-grid {
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.dayout-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.dayout-form-group-full {
+  grid-column: 1 / -1;
+}
+
+/* Form Labels */
+.dayout-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+}
+
+/* Form Inputs */
+.dayout-form-input,
+.dayout-form-select,
+.dayout-form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  color: #555;
+  transition: var(--transition);
+  background-color: #fff;
+}
+
+.dayout-form-input:focus,
+.dayout-form-select:focus,
+.dayout-form-textarea:focus {
+  outline: none;
+  border-color: #135736;
+  box-shadow: 0 0 0 3px rgba(3, 87, 1, 0.2);
+}
+
+.dayout-form-input::placeholder,
+.dayout-form-textarea::placeholder {
+  color: #aaa;
+}
+
+.dayout-form-input-error {
+  border-color: var(--danger-color);
+}
+
+.dayout-form-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+.dayout-readonly {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+/* Textarea */
+.dayout-form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Mobile/Country Input Group */
+.dayout-mobile-group .dayout-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dayout-country-select {
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+/* Input Group with Prefix */
+.dayout-input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.dayout-input-prefix {
+  background-color: var(--light-color);
+  border: 1px solid #ddd;
+  border-right: none;
+  padding: 0.75rem;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.dayout-input-group .dayout-form-input {
+  border-left: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* Radio Buttons */
+.dayout-customer-type-options {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.dayout-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.dayout-radio-input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+}
+
+.dayout-radio-input:checked {
+  border-color: var(--secondary-color);
+}
+
+.dayout-radio-input:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+/* Search Section */
+.dayout-search-section {
+  margin-bottom: 1.5rem;
+}
+
+.dayout-search-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dayout-search-controls .dayout-form-input {
+  flex: 1;
+}
+
+/* Search Results */
+.dayout-search-results {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.dayout-search-results h6 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.dayout-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dayout-result-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.dayout-result-item:hover {
+  background-color: var(--light-color);
+  border-color: var(--secondary-color);
+}
+
+/* Person Cards */
+.dayout-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dayout-person-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dayout-person-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dayout-person-header h6 {
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Package Selection */
+.dayout-filter-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: end;
+}
+
+.dayout-selected-count {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Package Grid */
+.dayout-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.dayout-package-card {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.dayout-package-card:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dayout-package-selected {
+  border-color: var(--success-color);
+  background-color: #f0fff4;
+}
+
+.dayout-package-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dayout-package-title {
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.dayout-package-description {
+  color: #666;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.dayout-package-category {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.dayout-package-price {
+  color: var(--success-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dayout-package-features {
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.dayout-package-features ul {
+  margin: 0.5rem 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.dayout-package-features li {
+  margin-bottom: 0.25rem;
+  color: #666;
+}
+
+.dayout-no-packages {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Checkbox */
+.dayout-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.dayout-checkbox:checked {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.dayout-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* File Input */
+.dayout-file-input {
+  padding: 0.5rem !important;
+}
+
+.dayout-form-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Buttons */
+.dayout-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+}
+
+.dayout-btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.dayout-btn-primary:hover {
+  background-color: #00301a;
+  transform: translateY(-1px);
+}
+
+.dayout-btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.dayout-btn-secondary:hover {
+  background-color: #545b62;
+  transform: translateY(-1px);
+}
+
+.dayout-btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.dayout-btn-success:hover {
+  background-color: #003016;
+  transform: translateY(-1px);
+}
+
+.dayout-btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.dayout-btn-danger:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+.dayout-btn-info {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.dayout-btn-info:hover {
+  background-color: #006666;
+  transform: translateY(-1px);
+}
+
+/* Form Actions */
+.dayout-form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--light-color);
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dayout-form-scope {
+    padding: 10px;
+  }
+  
+  .dayout-form-container {
+    padding: 20px;
+  }
+  
+  .dayout-main-heading {
+    font-size: 1.5rem;
+  }
+  
+  .dayout-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .dayout-filter-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .dayout-packages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dayout-customer-type-options {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .dayout-search-controls {
+    flex-direction: column;
+  }
+  
+  .dayout-form-actions {
+    flex-direction: column;
+  }
+  
+  .dayout-mobile-group .dayout-input-group {
+    flex-direction: column;
+  }
+  
+  .dayout-country-select {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .dayout-form-container {
+    padding: 15px;
+  }
+  
+  .dayout-main-heading {
+    font-size: 1.25rem;
+  }
+  
+  .dayout-form-heading {
+    font-size: 1.25rem;
+  }
+  
+  .dayout-person-card {
+    padding: 1rem;
+  }
+  
+  .dayout-package-card {
+    padding: 1rem;
+  }
+}
+
+
+/* Success/Error Popup Styles */
+.success-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeInOverlay 0.3s ease-out;
+}
+
+.success-popup-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  animation: slideInPopup 0.3s ease-out;
+}
+
+.success-popup-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.success-popup-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.success-popup-message {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.success-popup-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 100px;
+}
+
+.success-popup-button:hover {
+  background: #0056b3;
+}
+
+.success-popup-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Animations */
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInPopup {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .success-popup-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .success-popup-icon {
+    font-size: 2.5rem;
+  }
+  
+  .success-popup-title {
+    font-size: 1.25rem;
+  }
+  
+  .success-popup-message {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dayout-form-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Focus states for accessibility */
+.dayout-btn:focus,
+.dayout-package-card:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .dayout-form-scope {
+    padding: 0;
+  }
+  
+  .dayout-form-section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+  
+  .dayout-btn {
+    display: none;
+  }
+}

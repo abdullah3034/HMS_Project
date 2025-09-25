@@ -1,0 +1,195 @@
+.roomhome-container {
+  display: flex;
+  
+  padding: 2rem;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.roomhome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.roomhome-search-input {
+  padding: 0.5rem;
+  font-size: 16px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.roomhome-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.roomhome-table th,
+.roomhome-table td {
+  border: 1px solid #e5e5e5;
+  padding: 12px;
+  text-align: center;
+}
+
+.roomhome-table th {
+  background-color: #212121;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.roomhome-edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ffc107;
+  color: #000;
+  text-decoration: none;
+}
+
+.roomhome-edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.roomhome-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.roomhome-delete-btn:hover {
+  background-color: #b52a37;
+}
+
+.roomhome-add-btn {
+  margin-top: 1.5rem;
+  background-color: #28a745;
+  color: white;
+  align-self: flex-start;
+  padding: 0.6rem 1rem;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.roomhome-add-btn:hover {
+  background-color: #218838;
+}
+
+.roomhome-loading,
+.roomhome-error {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
+/* === Modal Overlay and Content === */
+.roomhome-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roomhome-modal-content {
+  width: 75%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 2001;
+  position: relative;
+}
+
+.roomhome-modal-content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.roomhome-modal-content .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.roomhome-modal-content .form-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.roomhome-modal-content input,
+.roomhome-modal-content select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* ===== Save and Cancel Buttons inside modal ===== */
+.roomhome-modal-content .cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.roomhome-modal-content .save-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.roomhome-modal-content .cancel-btn:hover {
+  background-color: #b52a37;
+}
+
+.roomhome-modal-content .save-btn:hover {
+  background-color: #218838;
+}
+
+.roomhome-blur {
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}

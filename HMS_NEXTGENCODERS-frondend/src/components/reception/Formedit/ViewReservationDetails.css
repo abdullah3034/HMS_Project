@@ -1,0 +1,1668 @@
+/* ViewReservationDetails.css */
+.view-reservation-scope {
+  --primary-color: #00421e;
+  --secondary-color: #008080;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #020e1b;
+  --success-color: #00431c;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --info-color: #3498db;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient-primary: linear-gradient(135deg, #00421e 0%, #005a29 100%);
+  --gradient-secondary: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #072902;
+}
+
+.view-reservation-scope * {
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.view-reservation-scope .reservation-details-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8fffe 0%, #f0f9f7 100%);
+  min-height: 100vh;
+}
+
+.view-reservation-scope .reservation-card {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  overflow: hidden;
+  border: 1px solid rgba(0, 66, 30, 0.1);
+}
+
+.view-reservation-scope .reservation-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 66, 30, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Header Section */
+.view-reservation-scope .reservation-header {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 24px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-reservation-scope .reservation-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.view-reservation-scope .reservation-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.view-reservation-scope .back-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-reservation-scope .back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(-5px);
+}
+
+/* Grid Layout */
+.view-reservation-scope .details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+  padding: 30px;
+}
+
+.view-reservation-scope .details-grid.full-width {
+  grid-template-columns: 1fr;
+}
+
+/* Section Cards */
+.view-reservation-scope .section-card {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-reservation-scope .section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-secondary);
+}
+
+.view-reservation-scope .section-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Guest Information Card */
+.view-reservation-scope .guest-info-card {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 100%);
+  border-left: 5px solid var(--info-color);
+}
+
+.view-reservation-scope .guest-info-card::before {
+  background: linear-gradient(90deg, var(--info-color) 0%, #5dade2 100%);
+}
+
+/* Rooms Card */
+.view-reservation-scope .rooms-card {
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0fff0 100%);
+  border-left: 5px solid var(--success-color);
+}
+
+.view-reservation-scope .rooms-card::before {
+  background: linear-gradient(90deg, var(--success-color) 0%, #27ae60 100%);
+}
+
+/* Payment Card */
+.view-reservation-scope .payment-card {
+  background: linear-gradient(135deg, #fdf2e9 0%, #fff8f0 100%);
+  border-left: 5px solid var(--warning-color);
+}
+
+.view-reservation-scope .payment-card::before {
+  background: linear-gradient(90deg, var(--warning-color) 0%, #f5b041 100%);
+}
+
+/* Section Headers */
+.view-reservation-scope .section-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.view-reservation-scope .section-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--secondary-color);
+  border-radius: 1px;
+}
+
+.view-reservation-scope .section-header svg {
+  color: var(--secondary-color);
+}
+
+/* Information Display */
+.view-reservation-scope .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.view-reservation-scope .info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  padding: 8px 0;
+}
+
+.view-reservation-scope .info-label {
+  font-weight: 600;
+  color: var(--dark-color);
+  min-width: 80px;
+}
+
+.view-reservation-scope .info-value {
+  color: #333;
+  flex: 1;
+}
+
+.view-reservation-scope .info-icon {
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
+
+/* Room Details */
+.view-reservation-scope .room-item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-reservation-scope .room-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--success-color);
+}
+
+.view-reservation-scope .room-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.view-reservation-scope .room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.view-reservation-scope .room-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.view-reservation-scope .room-type {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.view-reservation-scope .room-price {
+  text-align: right;
+}
+
+.view-reservation-scope .room-total {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--success-color);
+}
+
+.view-reservation-scope .room-rate {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.view-reservation-scope .total-charges {
+  background: rgba(0, 67, 28, 0.1);
+  border: 2px solid var(--success-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.view-reservation-scope .total-charges-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.view-reservation-scope .total-charges-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--success-color);
+}
+
+/* Payment Summary */
+.view-reservation-scope .payment-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.view-reservation-scope .payment-summary-item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-reservation-scope .payment-summary-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.view-reservation-scope .payment-summary-item.total::before {
+  background: var(--info-color);
+}
+
+.view-reservation-scope .payment-summary-item.paid::before {
+  background: var(--success-color);
+}
+
+.view-reservation-scope .payment-summary-item.due::before {
+  background: var(--danger-color);
+}
+
+.view-reservation-scope .payment-summary-item.status::before {
+  background: var(--warning-color);
+}
+
+.view-reservation-scope .payment-summary-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.view-reservation-scope .payment-summary-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.view-reservation-scope .payment-summary-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.view-reservation-scope .payment-summary-value.positive {
+  color: var(--success-color);
+}
+
+.view-reservation-scope .payment-summary-value.negative {
+  color: var(--danger-color);
+}
+
+.view-reservation-scope .payment-summary-value.neutral {
+  color: var(--info-color);
+}
+
+.view-reservation-scope .payment-summary-value.overpaid {
+  color: var(--warning-color);
+}
+
+/* Payment Status Badge */
+.view-reservation-scope .payment-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-reservation-scope .payment-status-badge.fully-paid {
+  background: rgba(0, 67, 28, 0.1);
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.view-reservation-scope .payment-status-badge.partially-paid {
+  background: rgba(243, 156, 18, 0.1);
+  color: var(--warning-color);
+  border: 1px solid var(--warning-color);
+}
+
+.view-reservation-scope .payment-status-badge.not-paid {
+  background: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+.view-reservation-scope .payment-status-badge.overpaid {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--info-color);
+  border: 1px solid var(--info-color);
+}
+
+/* Payment History */
+.view-reservation-scope .payment-history-item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.view-reservation-scope .payment-history-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(3px);
+}
+
+.view-reservation-scope .payment-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.view-reservation-scope .payment-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--success-color);
+}
+
+.view-reservation-scope .payment-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.view-reservation-scope .payment-method-badge {
+  background: var(--info-color);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.view-reservation-scope .cash-details {
+  background: rgba(0, 67, 28, 0.05);
+  border: 1px solid rgba(0, 67, 28, 0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.view-reservation-scope .cash-details-text {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.view-reservation-scope .payment-notes {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Payment Form */
+.view-reservation-scope .payment-form {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.view-reservation-scope .payment-form-field {
+  margin-bottom: 16px;
+}
+
+.view-reservation-scope .payment-form-label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.view-reservation-scope .payment-form-input,
+.view-reservation-scope .payment-form-select,
+.view-reservation-scope .payment-form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background: #ffffff;
+}
+
+.view-reservation-scope .payment-form-input:focus,
+.view-reservation-scope .payment-form-select:focus,
+.view-reservation-scope .payment-form-textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
+}
+
+.view-reservation-scope .payment-form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Cash Calculator */
+.view-reservation-scope .cash-calculator {
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0fff0 100%);
+  border: 2px solid var(--success-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.view-reservation-scope .cash-calculator-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--success-color);
+  font-weight: 700;
+}
+
+.view-reservation-scope .change-display {
+  background: #ffffff;
+  border: 1px solid var(--success-color);
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-reservation-scope .change-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.view-reservation-scope .change-amount {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.view-reservation-scope .change-amount.positive {
+  color: var(--success-color);
+}
+
+.view-reservation-scope .change-amount.negative {
+  color: var(--danger-color);
+}
+
+/* Quick Pay Button */
+.view-reservation-scope .quick-pay-section {
+  background: rgba(243, 156, 18, 0.1);
+  border: 1px solid var(--warning-color);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.view-reservation-scope .quick-pay-text {
+  color: var(--warning-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.view-reservation-scope .quick-pay-button {
+  background: var(--warning-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.view-reservation-scope .quick-pay-button:hover {
+  background: #e67e22;
+  transform: translateY(-1px);
+}
+
+/* Buttons */
+.view-reservation-scope .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-reservation-scope .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.view-reservation-scope .btn:hover::before {
+  left: 100%;
+}
+
+.view-reservation-scope .btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.view-reservation-scope .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 66, 30, 0.3);
+}
+
+.view-reservation-scope .btn-secondary {
+  background: var(--gradient-secondary);
+  color: white;
+}
+
+.view-reservation-scope .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 128, 128, 0.3);
+}
+
+.view-reservation-scope .btn-success {
+  background: linear-gradient(135deg, var(--success-color) 0%, #27ae60 100%);
+  color: white;
+}
+
+.view-reservation-scope .btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 67, 28, 0.3);
+}
+
+.view-reservation-scope .btn-warning {
+  background: linear-gradient(135deg, var(--warning-color) 0%, #f5b041 100%);
+  color: white;
+}
+
+.view-reservation-scope .btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.3);
+}
+
+.view-reservation-scope .btn-danger {
+  background: linear-gradient(135deg, var(--danger-color) 0%, #c0392b 100%);
+  color: white;
+}
+
+.view-reservation-scope .btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+.view-reservation-scope .btn-info {
+  background: linear-gradient(135deg, var(--info-color) 0%, #5dade2 100%);
+  color: white;
+}
+
+.view-reservation-scope .btn-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.view-reservation-scope .btn:disabled {
+  background: #bdc3c7;
+  color: #7f8c8d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.view-reservation-scope .btn:disabled::before {
+  display: none;
+}
+
+.view-reservation-scope .btn-full-width {
+  width: 100%;
+}
+
+/* Status Cards */
+.view-reservation-scope .status-card {
+  text-align: center;
+  padding: 32px 24px;
+  border-radius: 12px;
+  margin: 24px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-reservation-scope .status-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+}
+
+.view-reservation-scope .status-card.payment-required {
+  background: linear-gradient(135deg, #fff3cd 0%, #fef7e0 100%);
+  border: 2px solid var(--warning-color);
+}
+
+.view-reservation-scope .status-card.ready-checkout {
+  background: linear-gradient(135deg, #d1eddb 0%, #e8f5e8 100%);
+  border: 2px solid var(--success-color);
+}
+
+.view-reservation-scope .status-icon {
+  margin: 0 auto 16px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.view-reservation-scope .status-icon.warning {
+  background: rgba(243, 156, 18, 0.2);
+  color: var(--warning-color);
+}
+
+.view-reservation-scope .status-icon.success {
+  background: rgba(0, 67, 28, 0.2);
+  color: var(--success-color);
+}
+
+.view-reservation-scope .status-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.view-reservation-scope .status-title.warning {
+  color: var(--warning-color);
+}
+
+.view-reservation-scope .status-title.success {
+  color: var(--success-color);
+}
+
+.view-reservation-scope .status-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.view-reservation-scope .status-amount {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Modal/Dialog */
+.view-reservation-scope .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.view-reservation-scope .modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.view-reservation-scope .modal-header {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 20px 24px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.view-reservation-scope .modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.view-reservation-scope .modal-body {
+  padding: 24px;
+}
+
+.view-reservation-scope .modal-footer {
+  padding: 16px 24px 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Checkout Details */
+.view-reservation-scope .checkout-details {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.view-reservation-scope .checkout-details h4 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.view-reservation-scope .checkout-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.view-reservation-scope .checkout-details li {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 6px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.view-reservation-scope .checkout-details li::before {
+  content: '•';
+  color: var(--success-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Bill Generation */
+.view-reservation-scope .bill-section {
+  margin-top: 24px;
+}
+
+.view-reservation-scope .bill-card {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%);
+  border: 1px solid var(--info-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.view-reservation-scope .bill-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* Alerts and Notifications */
+.view-reservation-scope .alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 12px 0;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.view-reservation-scope .alert.success {
+  background: rgba(0, 67, 28, 0.1);
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.view-reservation-scope .alert.warning {
+  background: rgba(243, 156, 18, 0.1);
+  border-color: var(--warning-color);
+  color: var(--warning-color);
+}
+
+.view-reservation-scope .alert.info {
+  background: rgba(52, 152, 219, 0.1);
+  border-color: var(--info-color);
+  color: var(--info-color);
+}
+
+.view-reservation-scope .alert.danger {
+  background: rgba(231, 76, 60, 0.1);
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+/* Loading State */
+.view-reservation-scope .loading-container {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.view-reservation-scope .loading-spinner {
+  margin: 0 auto 16px;
+  width: 48px;
+  height: 48px;
+  color: var(--secondary-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.view-reservation-scope .loading-text {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 12px;
+}
+
+/* Empty States */
+.view-reservation-scope .empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.view-reservation-scope .empty-icon {
+  margin: 0 auto 16px;
+  width: 64px;
+  height: 64px;
+  color: #bdc3c7;
+}
+
+.view-reservation-scope .empty-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #7f8c8d;
+}
+
+.view-reservation-scope .empty-description {
+  font-size: 0.9rem;
+  color: #95a5a6;
+  margin-bottom: 4px;
+}
+
+.view-reservation-scope .empty-subtitle {
+  font-size: 0.8rem;
+  color: #bdc3c7;
+}
+
+/* Form Validation */
+.view-reservation-scope .form-error {
+  color: var(--danger-color);
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.view-reservation-scope .input-error {
+  border-color: var(--danger-color) !important;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+}
+
+/* Checkbox Styling */
+.view-reservation-scope .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.view-reservation-scope .checkbox-input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.view-reservation-scope .checkbox-label {
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Transitions and Animations */
+.view-reservation-scope .fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.view-reservation-scope .slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.view-reservation-scope .pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .view-reservation-scope .details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .view-reservation-scope .payment-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .view-reservation-scope .reservation-details-container {
+    padding: 12px;
+  }
+  
+  .view-reservation-scope .reservation-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .view-reservation-scope .reservation-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .view-reservation-scope .details-grid {
+    padding: 20px;
+  }
+  
+  .view-reservation-scope .section-card {
+    padding: 16px;
+  }
+  
+  .view-reservation-scope .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .view-reservation-scope .payment-summary-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .view-reservation-scope .room-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .view-reservation-scope .room-price {
+    text-align: left;
+  }
+  
+  .view-reservation-scope .modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .view-reservation-scope .modal-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .view-reservation-scope .modal-footer .btn {
+    width: 100%;
+  }
+  
+  .view-reservation-scope .status-card {
+    padding: 24px 16px;
+  }
+  
+  .view-reservation-scope .status-amount {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-reservation-scope .reservation-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .view-reservation-scope .section-header {
+    font-size: 1.1rem;
+  }
+  
+  .view-reservation-scope .room-total {
+    font-size: 1.1rem;
+  }
+  
+  .view-reservation-scope .payment-summary-value {
+    font-size: 1.3rem;
+  }
+  
+  .view-reservation-scope .total-charges-amount {
+    font-size: 1.3rem;
+  }
+  
+  .view-reservation-scope .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .view-reservation-scope .back-button,
+  .view-reservation-scope .payment-form,
+  .view-reservation-scope .btn,
+  .view-reservation-scope .modal-overlay {
+    display: none !important;
+  }
+  
+  .view-reservation-scope .reservation-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .view-reservation-scope .section-card {
+    page-break-inside: avoid;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .view-reservation-scope .reservation-header {
+    background: #f8f9fa !important;
+    color: #333 !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .view-reservation-scope {
+    --primary-color: #000000;
+    --secondary-color: #0066cc;
+    --success-color: #006600;
+    --warning-color: #cc6600;
+    --danger-color: #cc0000;
+  }
+  
+  .view-reservation-scope .section-card {
+    border: 2px solid #000;
+  }
+  
+  .view-reservation-scope .btn {
+    border: 2px solid;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .view-reservation-scope * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .view-reservation-scope .btn:hover {
+    transform: none;
+  }
+  
+  .view-reservation-scope .section-card:hover {
+    transform: none;
+  }
+}
+
+/* Focus Styles for Accessibility */
+.view-reservation-scope *:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.view-reservation-scope .btn:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+.view-reservation-scope ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.view-reservation-scope ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.view-reservation-scope ::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+.view-reservation-scope ::-webkit-scrollbar-thumb:hover {
+  background: #006666;
+}
+
+/* Utility Classes */
+.view-reservation-scope .text-center { text-align: center; }
+.view-reservation-scope .text-left { text-align: left; }
+.view-reservation-scope .text-right { text-align: right; }
+
+.view-reservation-scope .mt-1 { margin-top: 0.25rem; }
+.view-reservation-scope .mt-2 { margin-top: 0.5rem; }
+.view-reservation-scope .mt-3 { margin-top: 0.75rem; }
+.view-reservation-scope .mt-4 { margin-top: 1rem; }
+.view-reservation-scope .mt-5 { margin-top: 1.25rem; }
+.view-reservation-scope .mt-6 { margin-top: 1.5rem; }
+
+.view-reservation-scope .mb-1 { margin-bottom: 0.25rem; }
+.view-reservation-scope .mb-2 { margin-bottom: 0.5rem; }
+.view-reservation-scope .mb-3 { margin-bottom: 0.75rem; }
+.view-reservation-scope .mb-4 { margin-bottom: 1rem; }
+.view-reservation-scope .mb-5 { margin-bottom: 1.25rem; }
+.view-reservation-scope .mb-6 { margin-bottom: 1.5rem; }
+
+.view-reservation-scope .p-1 { padding: 0.25rem; }
+.view-reservation-scope .p-2 { padding: 0.5rem; }
+.view-reservation-scope .p-3 { padding: 0.75rem; }
+.view-reservation-scope .p-4 { padding: 1rem; }
+.view-reservation-scope .p-5 { padding: 1.25rem; }
+.view-reservation-scope .p-6 { padding: 1.5rem; }
+
+.view-reservation-scope .font-bold { font-weight: 700; }
+.view-reservation-scope .font-semibold { font-weight: 600; }
+.view-reservation-scope .font-medium { font-weight: 500; }
+
+.view-reservation-scope .text-sm { font-size: 0.875rem; }
+.view-reservation-scope .text-base { font-size: 1rem; }
+.view-reservation-scope .text-lg { font-size: 1.125rem; }
+.view-reservation-scope .text-xl { font-size: 1.25rem; }
+.view-reservation-scope .text-2xl { font-size: 1.5rem; }
+
+.view-reservation-scope .hidden { display: none; }
+.view-reservation-scope .block { display: block; }
+.view-reservation-scope .inline-block { display: inline-block; }
+.view-reservation-scope .flex { display: flex; }
+.view-reservation-scope .inline-flex { display: inline-flex; }
+.view-reservation-scope .grid { display: grid; }
+
+.view-reservation-scope .items-center { align-items: center; }
+.view-reservation-scope .items-start { align-items: flex-start; }
+.view-reservation-scope .items-end { align-items: flex-end; }
+
+.view-reservation-scope .justify-center { justify-content: center; }
+.view-reservation-scope .justify-start { justify-content: flex-start; }
+.view-reservation-scope .justify-end { justify-content: flex-end; }
+.view-reservation-scope .justify-between { justify-content: space-between; }
+
+.view-reservation-scope .w-full { width: 100%; }
+.view-reservation-scope .h-full { height: 100%; }
+
+.view-reservation-scope .rounded { border-radius: 0.25rem; }
+.view-reservation-scope .rounded-md { border-radius: 0.375rem; }
+.view-reservation-scope .rounded-lg { border-radius: 0.5rem; }
+.view-reservation-scope .rounded-xl { border-radius: 0.75rem; }
+
+.view-reservation-scope .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.view-reservation-scope .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+.view-reservation-scope .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.view-reservation-scope .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+
+/* ViewReservationDetails.css - Add these styles for checkout status */
+
+/* Status Badge Styles */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid;
+  margin-left: 16px;
+}
+
+.status-badge-checkedout {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.status-badge-confirmed {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.status-badge-checkedin {
+  background-color: #cce5ff;
+  color: #004085;
+  border-color: #80bdff;
+}
+
+.status-badge-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeaa7;
+}
+
+.status-badge-default {
+  background-color: #e2e3e5;
+  color: #495057;
+  border-color: #ced4da;
+}
+
+/* Header Updates for Checkout Status */
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reservation-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.checkout-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #6c757d;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.checkout-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Checked Out Card Styling */
+.checked-out-card {
+  border: 2px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+
+.checked-out-card .section-card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+}
+
+/* Disabled Payment Section */
+.disabled-section {
+  opacity: 0.7;
+  pointer-events: none;
+  position: relative;
+}
+
+.disabled-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.disabled-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+}
+
+.disabled-label {
+  color: #6c757d;
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 8px;
+}
+
+/* Checkout Complete Status Card */
+.checkout-complete {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border: 2px solid #28a745;
+  color: #155724;
+}
+
+.status-icon.complete {
+  background-color: #28a745;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.status-title.complete {
+  color: #155724;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout-summary {
+  width: 100%;
+}
+
+.checkout-details-summary {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #c3e6cb;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .amount {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.payment-status.fully-paid {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.payment-status.partially-paid {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.payment-status.overpaid {
+  color: #17a2b8;
+  font-weight: bold;
+}
+
+.payment-status.not-paid {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.post-checkout-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reservation-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .header-left {
+    width: 100%;
+  }
+  
+  .status-badge {
+    align-self: flex-start;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  
+  .checkout-indicator {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* Enhanced Status Cards */
+.status-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid;
+  margin-top: 24px;
+}
+
+.status-card.payment-required {
+  border-color: #ffc107;
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+}
+
+.status-card.ready-checkout {
+  border-color: #28a745;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+}
+
+/* Animation for status changes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state for checked out reservations */
+.checked-out-card .loading-container {
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+}
+
+/* Update existing styles for better checkout display */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e9ecef;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Ensure proper spacing in checked out state */
+.checked-out-card .info-value,
+.checked-out-card .room-number,
+.checked-out-card .payment-amount {
+  color: #6c757d;
+}
+
+.checked-out-card .section-header {
+  color: #6c757d;
+}
+
+/* Print-friendly styles for receipts */
+@media print {
+  .checked-out-card {
+    background-color: white !important;
+    border: none !important;
+  }
+  
+  .status-badge,
+  .checkout-indicator,
+  .post-checkout-actions {
+    display: none !important;
+  }
+}

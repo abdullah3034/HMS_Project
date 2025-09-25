@@ -1,0 +1,57 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #018A97;
+    color: white;
+    position: fixed;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    font-size: 30px;
+    display: block;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  ul li a:hover {
+    background: #005f66;
+    text-decoration: unset;
+    color: white;
+  }
+  
+  .restaurant-container {
+    display: flex;
+  }
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }

@@ -1,0 +1,489 @@
+/* Scoped CSS for CheckInForm1 component only */
+.checkin-form-scope {
+  --primary-color: #00421e;
+  --secondary-color: #008080;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #020e1b;
+  --success-color: #00431c;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --border-radius: 6px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #072902;
+  padding: 20px;
+}
+
+.checkin-form-scope * {
+  box-sizing: border-box;
+}
+
+/* Form Container */
+.checkin-form-scope .checkinform-form-container {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.checkin-form-scope .checkinform-form-container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.checkin-form-scope .checkinform-form-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--light-color);
+  position: relative;
+}
+
+.checkin-form-scope .checkinform-form-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+/* Form Grid Layout */
+.checkin-form-scope .checkinform-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Form Elements */
+.checkin-form-scope .checkinform-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.checkin-form-scope .checkinform-form-input,
+.checkin-form-scope .checkinform-form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  color: #555;
+  transition: var(--transition);
+  background-color: #fff;
+}
+
+.checkin-form-scope .checkinform-form-input:focus,
+.checkin-form-scope .checkinform-form-select:focus {
+  outline: none;
+  border-color:#135736;
+  box-shadow: 0 0 0 3px rgba(3, 87, 1, 0.2);
+}
+
+.checkin-form-scope .checkinform-form-input::placeholder {
+  color: #aaa;
+}
+
+/* Radio Buttons and Checkboxes */
+.checkin-form-scope .checkinform-customer-type-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.checkin-form-scope .checkinform-customer-type-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkin-form-scope .checkinform-customer-type-options input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+}
+
+.checkin-form-scope .checkinform-customer-type-options input[type="radio"]:checked {
+  border-color: var(--secondary-color);
+}
+
+.checkin-form-scope .checkinform-customer-type-options input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+/* Search Container */
+.checkin-form-scope .checkinform-search-container {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.checkin-form-scope .checkinform-search-container input {
+  flex: 1;
+}
+
+.checkin-form-scope .customer-search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.checkin-form-scope .customer-search-button:hover {
+  background-color: #2980b9;
+}
+
+/* Search Results Table */
+.checkin-form-scope .customer-search-results {
+  margin-top: 1.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+}
+
+.checkin-form-scope .customer-results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkin-form-scope .customer-results-table th,
+.checkin-form-scope .customer-results-table td {
+  padding: 1rem;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.checkin-form-scope .customer-results-table th {
+  background-color: var(--primary-color);
+  color: white;
+  position: sticky;
+  top: 0;
+  font-weight: 500;
+}
+
+.checkin-form-scope .customer-results-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.checkin-form-scope .customer-results-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.checkin-form-scope .customer-results-table input[type="radio"] {
+  cursor: pointer;
+}
+
+.checkin-form-scope .customer-no-results {
+  padding: 1.5rem;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* Person Table */
+.checkin-form-scope .person-table-responsive {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.checkin-form-scope .person-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.checkin-form-scope .person-table th,
+.checkin-form-scope .person-table td {
+  padding: 1rem;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.checkin-form-scope .person-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.checkin-form-scope .person-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.checkin-form-scope .person-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.checkin-form-scope .person-table-input,
+.checkin-form-scope .person-table-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.checkin-form-scope .person-table-input:focus,
+.checkin-form-scope .person-table-select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.checkin-form-scope .person-add-btn,
+.checkin-form-scope .person-remove-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.checkin-form-scope .person-add-btn {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.checkin-form-scope .person-remove-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.checkin-form-scope .person-add-btn:hover {
+  background-color: #219653;
+  transform: scale(1.05);
+}
+
+.checkin-form-scope .person-remove-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Room Selection Section */
+.checkin-form-scope .filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkin-form-scope .filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.checkin-form-scope .filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.checkin-form-scope .filter-group input,
+.checkin-form-scope .filter-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.checkin-form-scope .filter-group input:focus,
+.checkin-form-scope .filter-group select:focus {
+  outline: none;
+  border-color: #135736; /* Dark green border color */
+  box-shadow: 0 0 0 3px rgba(3, 87, 1, 0.2); /* Subtle green glow */
+}
+.checkin-form-scope .rooms-table-container {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.checkin-form-scope .rooms-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.checkin-form-scope .rooms-table th,
+.checkin-form-scope .rooms-table td {
+  padding: 1rem;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.checkin-form-scope .rooms-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.checkin-form-scope .rooms-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.checkin-form-scope .rooms-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.checkin-form-scope .rooms-table input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkin-form-scope .no-rooms {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Submit Button */
+.checkin-form-scope .submit-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1.5rem;
+}
+
+.checkin-form-scope .submit-button:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* File Input */
+.checkin-form-scope input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+}
+
+/* Error Message */
+.checkin-form-scope .error-message {
+  color: var(--danger-color);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Required Field Indicator */
+.checkin-form-scope .required,
+.checkin-form-scope .asterisk {
+  color: var(--danger-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .checkin-form-scope .checkinform-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkin-form-scope .filter-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .checkin-form-scope .checkinform-customer-type-options {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .checkin-form-scope .checkinform-search-container {
+    flex-direction: column;
+  }
+  
+  .checkin-form-scope .customer-search-button {
+    width: 100%;
+  }
+}
+
+/* Select Dropdown Styling */
+.checkin-form-scope .react-select__control {
+  min-height: 44px !important;
+  border: 1px solid #ddd !important;
+  box-shadow: none !important;
+}
+
+.checkin-form-scope .react-select__control--is-focused {
+  border-color: var(--secondary-color) !important;
+  box-shadow: 0 0 0 1px var(--secondary-color) !important;
+}
+
+.checkin-form-scope .react-select__option--is-selected {
+  background-color: var(--secondary-color) !important;
+}
+
+.checkin-form-scope .react-select__option--is-focused {
+  background-color: #e1f0fa !important;
+}
+
+/* Date Input Styling */
+.checkin-form-scope input[type="date"] {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 16px;
+  padding-right: 2.5rem !important;
+}
+
+/* Textarea Styling */
+.checkin-form-scope textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Full Width Elements */
+.checkin-form-scope .full-width {
+  grid-column: 1 / -1;
+}

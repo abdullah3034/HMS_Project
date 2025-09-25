@@ -1,0 +1,59 @@
+/* HotelDashboard.css */
+.hotel-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-top-section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.dashboard-bottom-section {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.dashboard-left-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.dashboard-right-column {
+  flex: 1;
+  min-width: 350px;
+  max-width: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-bottom-section {
+    flex-direction: column;
+  }
+  
+  .dashboard-right-column {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hotel-dashboard {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .dashboard-top-section,
+  .dashboard-left-column,
+  .dashboard-right-column {
+    padding: 15px;
+  }
+}

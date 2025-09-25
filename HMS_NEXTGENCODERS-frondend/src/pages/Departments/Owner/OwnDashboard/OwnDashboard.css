@@ -1,0 +1,113 @@
+.Owndashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-right: 30PX;
+   /* Account for fixed sidebar */
+  padding: 1rem;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.dash-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+.chart-table-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.chart-column {
+  flex: 1 1 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dash-metric-box {
+  flex: 1 1 220px;
+  background-color: #086e6e;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.dash-metric-value {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.dash-metric-label {
+  font-size: 20px;
+  margin-top: 0.5rem;
+}
+
+.dash-chart-box {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 30PX;
+  margin-top: 30PX;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dash-chart-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-update-label {
+  background-color: #ed9a2b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dash-update-label:hover {
+  background-color: #c47e1f;
+}
+
+.dash-update-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.dash-chart-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+  
